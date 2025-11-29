@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       .container {
+            background-image: url("https://tse1.mm.bing.net/th/id/OIP.nGKiACItIZsDNyOuMl3BGQHaDt?pid=Api&P=0&h=180");
+           background-size: cover;
+           box-sizing: border-box;
+           min-height: 100vh;
+           margin: 0;
+        }
+        .form_fill_up {
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: left;
+            padding: 30px;;
+        }
+        #fname, #lname, #email, #phone, #event{
+            width: 250px;
+            height: 25px;
+            font-size: 18px;
+        }
+        input[type="submit"] {
+            font-size: 18px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+   <center> <h1>Registration Form for the Events</h1></center>
+   <div class="form_fill_up">
+    <form action="submit_form.php" method="post">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" required><br><br>
+        
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required><br><br>
+        
+        <label for="event">Select Event:</label><br>
+        <select id="event" name="event" required>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="conference">Conference</option>
+            <option value="sports">Sports</option>
+        </select><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+   </div>
+  </div>
+
+</body>
+</html>

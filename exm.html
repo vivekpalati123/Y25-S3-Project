@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farming Knowledge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f9f4;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      overflow: hidden; /* Hide scrollbars */
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 2em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .question-block {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      max-width: 800px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.5s;
+    }
+
+    .question-block.active {
+      display: flex;
+    }
+
+    .question-block img {
+      width: 80%;
+      max-width: 500px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .answer {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      bottom: 40px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .nav-buttons button {
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+  <header>🌾 Farming Knowledge 🌿</header>
+
+  <div class="container">
+    <!-- Question 1 -->
+    <div class="question-block active">
+      <img src="photo1.jpg" alt="Farming Image 1">
+      <div class="question"><!-- Type your question 1 here --></div>
+      <div class="answer"><!-- Type your answer 1 here --></div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question-block">
+      <img src="photo2.jpg" alt="Farming Image 2">
+      <div class="question"><!-- Type your question 2 here --></div>
+      <div class="answer"><!-- Type your answer 2 here --></div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question-block">
+      <img src="photo3.jpg" alt="Farming Image 3">
+      <div class="question"><!-- Type your question 3 here --></div>
+      <div class="answer"><!-- Type your answer 3 here --></div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question-block">
+      <img src="photo4.jpg" alt="Farming Image 4">
+      <div class="question"><!-- Type your question 4 here --></div>
+      <div class="answer"><!-- Type your answer 4 here --></div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question-block">
+      <img src="photo5.jpg" alt="Farming Image 5">
+      <div class="question"><!-- Type your question 5 here --></div>
+      <div class="answer"><!-- Type your answer 5 here --></div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button id="prevBtn">← Previous</button>
+      <button id="nextBtn">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    const blocks = document.querySelectorAll('.question-block');
+    let currentIndex = 0;
+
+    function showBlock(index) {
+      blocks.forEach((block, i) => {
+        block.classList.toggle('active', i === index);
+      });
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % blocks.length;
+      showBlock(currentIndex);
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + blocks.length) % blocks.length;
+      showBlock(currentIndex);
+    });
+  </script>
+
+</body>
+</html>

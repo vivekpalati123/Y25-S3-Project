@@ -1,0 +1,239 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #1f2937;
+  line-height: 1.6;
+  transition: background 0.5s ease;
+  background-image: url(img/back1.jpg);
+  background-size: cover;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.button {
+  background-color: #db8ab8;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+.continue-button:hover {
+  background-color: #45a049;
+  transform: translateY(-5px);
+}
+.continue-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.intro {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #4CAF50;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.buttons {
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.intro h2 {
+  font-size: 28px;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  text-align: justify;
+}
+
+
+
+header {
+  background: #0f172a;
+  color: #f1f5f9;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInDown 5s ease forwards;
+}
+
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+
+.question-block {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.question-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+
+.content-wrapper {
+  padding: 30px 25px;
+}
+
+.content-wrapper .question {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.content-wrapper .question::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #22c55e;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+
+.answer p, .answer ul {
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+}
+
+.answer ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.answer img {
+  display: block;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.answer img:hover {
+  transform: scale(1.05);
+}
+
+
+footer {
+  text-align: center;
+  background-color: #134e4a;
+  color: #f1f5f9;
+  padding: 30px 20px;
+  font-size: 1rem;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.1);
+  margin-top: 50px;
+}
+
+
+@media (min-width: 900px) {
+  .question-block {
+    flex-direction: row;
+  }
+
+  .image-wrapper, .content-wrapper {
+    width: 50%;
+  }
+
+  .content-wrapper {
+    padding: 40px;
+  }
+
+  .image-wrapper img {
+    height: 100%;
+  }
+}

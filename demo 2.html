@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Layout Example</title>
+    <style>
+        .container{ 
+            border: 1px solid black;
+            min-height: 96vh;
+            width:96vw;
+                }
+        .common{
+            border: 1px solid rgb(135, 212, 12);
+            display: inline-flex;
+            margin: 10px 20px 30px 40px;
+            padding:  20px;
+            border-radius: 38px;
+            color:rgb(233, 233, 4);
+            text-shadow: 2px 2px 3px black,-2px -2px -3px green; 
+        }
+
+        div {
+            box-shadow: 7px 5px 11px rgba(251, 2, 89, 0.911);
+
+        }
+        div:nth-child(2){
+            font-size: 20px;
+            font-style:italic;
+        }
+        div:nth-last-child(even){
+            font-family:400;
+        }
+        
+            #id1{
+                background-color: aquamarine;
+                
+            }
+            #id2{
+                background-color: rgb(244, 15, 15);
+            }
+            #id3{
+                background-color: rgba(255, 127, 212, 0.522);
+            }
+            #id4{
+                background-color: rgb(22, 135, 97);
+            }
+            #id5{
+                background-color: rgb(151, 225, 22);
+            }
+            container.c1{
+                color:aqua;
+            }
+        
+    </style>
+</head>
+<body>
+<div class="container">
+ 
+<div id="id1" class="common  c1"> Division 1 </div>
+<div id="id2" class="common  c1"> Division 2 </div>
+<div id="id3" class="common"> Division 3 </div>
+<div id="id4" class="common"> Division 4 </div>
+<div id="id5" class="common"> Division 5 </div>
+</div>
+<p class "c1"><b><i>this is vp code</i></b></p>
+</body>
+</html>

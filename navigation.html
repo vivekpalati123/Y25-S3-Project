@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1(){
+            const uname = document.getElementById("idun").value;
+            //alert("User name is: " + uname);
+            let b = "false"
+            if(confirm("Is 10 greater than " + uname + "?")){
+                //alert("This is true");
+                //document.getElementsByName("un")[0].value = "true"
+                document.getElementsByName("un")[0].value = prompt("if 10 > " + uname + ", then type true")
+                //[e1,e2,e3][0].value = "true"
+            } else {
+                //alert("This is false");
+                //document.getElementsByName("un")[0].value = "false"
+                var a = "true"
+                document.getElementsByName("un")[0].value = prompt(if 10 > ${uname}, then type ${a} or ${b})
+            }
+            /* multi line comment */
+            //single line comment
+        }
+        function fun2(){
+            //fun1();
+            //setTimeout(fun1, 5000);
+            //setInterval(fun1, 10000);
+            const uname = document.getElementById("idun").value;
+            console.log(10 + uname);
+            console.log(10 - uname);
+            console.log(10 * uname);
+            console.log(10 / uname);
+            console.log(10 % uname);
+            console.log(Number(uname) + 10);
+            console.log(parseInt(uname) + 10);
+            console.log(Math.round(parseFloat(uname) + 10));
+            console.log(typeof(uname));
+            console.log(typeof(Number(uname)));
+            console.log(Math.random());
+        }
+    </script>
+</head>
+<body>
+    <form action="pages/page1.html">
+        Name: <input type="text" name="name" id="idname" />
+        <br><br>
+        Email: <input type="email" name="email" id="idemail" />
+        <br><br>
+        <input type="submit" value="SAVE" />
+    </form>
+    <form action="pages/page2.html" method="get">
+        Password: <input type="password" name="password" id="idpassword" />
+        <br><br>
+        user name: <input type="text" name="un" id="idun" onchange="fun2()" />
+        <br><br>
+        <!-- <input type="submit" value="GO TO PAGE 2" /> -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,63 @@
+* {
+        margin:0px;
+        padding:0px;
+}
+      .container{
+            text-align: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            background-size: cover;
+            background-image: url("https://tse2.mm.bing.net/th/id/OIP._V6GkPQ2L9NomI3N09zaywHaDU?pid=Api&P=0&h=180");
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
+            font-size: 34px;
+            font-weight: 600;
+             color: #222;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            gap: 20px;
+            grid-template-rows: auto auto;
+            align-items: left;
+            margin-top: 40px;
+        }
+        .Photo {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 0;
+            background-color: rgb(247, 245, 242);
+        }
+        .pad {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            background-color: bisque;
+        }
+        .Buds {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            background-color: bisque;
+        }
+        .Laptop{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            background-color: bisque;
+        }
+        .Suitcase{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            background-color: bisque;
+        }
+        .Smartwatch{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            background-color: bisque;
+        }
+        
